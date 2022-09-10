@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bfc</title>
+    <style>
+        .container {
+            background-color: #f1f1f1;
+        }
+        .left {
+            float: left;
+        }
+        .bfc {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<p>BFC 块级格式上下文，一个独立渲染区域，内部元素的渲染不会影响边界以外的元素</p>
+<p>触发条件</p>
+<ul>
+    <li>float不是none</li>
+    <li>position为absolute或者fixed</li>
+    <li>overflow不是visible</li>
+    <li>display是flex inline-block</li>
+</ul>
+<div class="container bfc">
+    <img class="left" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F1113%2F052420110515%2F200524110515-1-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665395230&t=36521fc1c66fb7a4a8f287814c09cb05" alt="">
+    <p>某一段文字。。。。。。。</p>
+</div>
+</body>
+</html>
