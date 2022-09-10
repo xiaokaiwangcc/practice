@@ -6,6 +6,7 @@ import FnSetState from "./React/setState/FnSetState";
 import StateDemo from "./React/setState/SetStateDemo";
 import DemoRef from "./React/Ref/DemoRef";
 import MemoryRef from "./React/Ref/MemoryRef";
+import HOC from "./React/Hoc/ReverseInheritance";
 
 function App() {
     // const eb = new EventBus()
@@ -45,6 +46,7 @@ function App() {
             <StateDemo />
             <DemoRef />
             <MemoryRef />
+            <HOC />
         </div>
     );
 }
