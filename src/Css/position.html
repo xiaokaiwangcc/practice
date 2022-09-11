@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>absolute和relative 分别依据什么定位</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            position: relative;
+            border: 1px solid black;
+        }
+        .absoluteBox {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border: 1px solid blue;
+            /*left: 50%;*/
+            /*margin-left: -50px;*/
+            /*transform: translateY(50%);*/
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<pre style="font-size: 20px">
+    relative依据自身定位
+    absolute依据最近一层的定位元素定位
+    定位元素 absolute relative fixed 没找到就用body
+</pre>
+<div class="box">
+    <div class="absoluteBox"></div>
+</div>
+</body>
+</html>
