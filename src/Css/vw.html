@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>vw 和 vh</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            background-color: red;
+            width: 10vw;
+            height: 10vh;
+        }
+    </style>
 </head>
 <body>
+<pre>
     rem的弊端： rem的阶梯性
-    <br>
     网页视口尺寸
+    window.screen.height 屏幕高度
+    window.innerHeight 网页视口高度   vh 是视口高度的1/100
+    window.innerWidth 网页视口宽度   vw 是视口宽度的1/100
+    document.body.clientHeight body高度
+    vMax 取最大值
+    vMin 取最小值
+</pre>
+
+    <div>
+        vw vh测试
+    </div>
 </body>
 </html>
