@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定的底栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .Site {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .Site-content{
+            flex: 1;
+            background-color: pink;
+        }
+        .footer {
+            width: 100%;
+            height: 200px;
+            background-color: yellow;
+        }
+        .header {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body class="Site">
+<header class="header">页头</header>
+<main class="Site-content">pink</main>
+<footer class="footer">页脚</footer>
+</body>
+</html>

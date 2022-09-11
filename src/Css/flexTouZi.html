@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>四色骰子</title>
+    <style>
+        .box {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #cccccc;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #666666;
+        }
+        .column {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+</div>
+</body>
+</html>
