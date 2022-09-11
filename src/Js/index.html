@@ -11,7 +11,18 @@
 <p>这是一段文字</p>
 <script src="Jquery-demo.js"></script>
 <script>
-    const $p = new Jquery('p')
+    let a, i
+    for (i = 0; i < 10; i++) {
+        a = document.createElement('a')
+        a.innerHTML = i+ '<br/>'
+        a.addEventListener('click', function (e){
+            e.preventDefault()
+            console.log(i)
+            alert(i)
+        })
+        document.body.appendChild(a)
+    }
+
 </script>
 </body>
 </html>
