@@ -15,10 +15,11 @@
     for (i = 0; i < 10; i++) {
         a = document.createElement('a')
         a.innerHTML = i+ '<br/>'
+        let j = i
         a.addEventListener('click', function (e){
             e.preventDefault()
             console.log(i)
-            alert(i)
+            alert(j)
         })
         document.body.appendChild(a)
     }
