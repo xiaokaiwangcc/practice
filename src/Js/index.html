@@ -10,6 +10,7 @@
 <p>这是一段文字</p>
 <p>这是一段文字</p>
 <script src="Jquery-demo.js"></script>
+<script src="同步异步区别.js"></script>
 <script>
     let a, i
     for (i = 0; i < 10; i++) {
@@ -23,6 +24,12 @@
         })
         document.body.appendChild(a)
     }
+    const url = 'https://img1.baidu.com/it/u=2320626094,362852079&fm=253&fmt=auto&app=120&f=JPEG?w=450&h=670'
+    loadImg(url).then(img => {
+        console.log(img.width)
+    }).catch(err => {
+        console.error(err)
+    })
 
 </script>
 </body>
