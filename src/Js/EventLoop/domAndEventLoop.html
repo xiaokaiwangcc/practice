@@ -6,9 +6,16 @@
 </head>
 <body>
     <p>dom事件也是使用回调，基于event loop</p>
+    <p>
+        // event loop 和 dom渲染
+        // 每次Call stack清空(即每次轮询结束)，即同步任务执行完成
+        // 都是DOM重新渲染的机会。DOM结构如有改变则重新渲染
+        // 然后再去触发下次event loop
+    </p>
     <button id="btn1">提交</button>
     <script>
         console.log('Hi')
+        console.log(Promise.resolve(5));
         const btn = document.getElementById('btn1')
         btn.onclick = (function (e){
             console.log('button click')
