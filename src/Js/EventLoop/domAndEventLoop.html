@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom事件和事件循环</title>
+</head>
+<body>
+    <p>dom事件也是使用回调，基于event loop</p>
+    <button id="btn1">提交</button>
+    <script>
+        console.log('Hi')
+        const btn = document.getElementById('btn1')
+        btn.onclick = (function (e){
+            console.log('button click')
+        })
+        console.log('end')
+    </script>
+</body>
+</html>
