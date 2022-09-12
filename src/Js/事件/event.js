@@ -6,6 +6,24 @@ function bindEvent(elem, type, fn){
     elem.addEventListener(type, fn)
 }
 
+function bindEventAdvance(elem, type, selector,fn){
+    if (fn == null){
+        fn = selector
+        selector = null
+    }
+    elem.addEventListener(type, (event) => {
+        const target = event.target
+        if (selector){
+            // 代理绑定
+            if (target.matches(selector)){
+                fn.call(target, event)
+            }
+        }else {
+            fn.call(target, event)
+        }
+    })
+}
+
 const btn1 = document.getElementById('btn1')
 
 // bindEvent(btn1, 'click', (e) => {
@@ -33,12 +51,17 @@ bindEvent(body, 'click', (e) => {
 
 // 代码简洁 减少浏览器内存占用 但是不要滥用（瀑布流）
 const div3 = document.getElementById('div3')
-bindEvent(div3, 'click', (e) => {
+// bindEvent(div3, 'click', (e) => {
+//     e.preventDefault()
+//     const target = e.target
+//     if (target.nodeName === 'A'){
+//         alert(target.innerHTML)
+//     }
+// })
+
+bindEventAdvance(div3, 'click', 'A', function (e)  {
     e.preventDefault()
-    const target = e.target
-    if (target.nodeName === 'A'){
-        alert(target.innerHTML)
-    }
+    alert(this.innerHTML)
 })
 
 const btn2 = document.getElementById('btn2')
@@ -56,3 +79,5 @@ bindEvent(btn2, 'click', (e) => {
     div3.appendChild(frag)
     index = index+4
 })
+
+// 事件冒泡原理是基于dom的树形结构往上冒泡，然后可以在上级接受到事件的触发，使用场景事件代理
